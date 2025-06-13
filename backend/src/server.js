@@ -17,12 +17,13 @@ import { initializeAI } from './services/ai.js';
 import { setupSocketIO } from './services/socket.js';
 
 dotenv.config();
+console.log('DB_PASSWORD:', process.env.DB_PASSWORD, typeof process.env.DB_PASSWORD);
 
 const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+    origin:  "http://localhost:3000",
     methods: ["GET", "POST"]
   }
 });

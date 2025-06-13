@@ -6,10 +6,10 @@ import stockRoutes from './stocks.js';
 import transactionRoutes from './transactions.js';
 import healthCenterRoutes from './healthCenters.js';
 import iotRoutes from './iot.js';
-import aiRoutes from './ai.js';
+/*import aiRoutes from './ai.js';*/
 import reportRoutes from './reports.js';
 import alertRoutes from './alerts.js';
-import blockchainRoutes from './blockchain.js';
+/*import blockchainRoutes from './blockchain.js';*/
 
 export function setupRoutes(app) {
   const apiVersion = process.env.API_VERSION || 'v1';
@@ -25,10 +25,10 @@ export function setupRoutes(app) {
   app.use(`${baseRoute}/transactions`, transactionRoutes);
   app.use(`${baseRoute}/health-centers`, healthCenterRoutes);
   app.use(`${baseRoute}/iot`, iotRoutes);
-  app.use(`${baseRoute}/ai`, aiRoutes);
+  /*app.use(`${baseRoute}/ai`, aiRoutes);*/
   app.use(`${baseRoute}/reports`, reportRoutes);
   app.use(`${baseRoute}/alerts`, alertRoutes);
-  app.use(`${baseRoute}/blockchain`, blockchainRoutes);
+ /* app.use(`${baseRoute}/blockchain`, blockchainRoutes);*/
 
   // Route de test
   app.get(`${baseRoute}/test`, (req, res) => {

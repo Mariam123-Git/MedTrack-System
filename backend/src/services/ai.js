@@ -1,4 +1,4 @@
-import * as tf from '@tensorflow/tfjs-node';
+import * as tf from '@tensorflow/tfjs'
 import { logger } from '../utils/logger.js';
 import { Stock, Medicine, HealthCenter, Transaction } from '../models/index.js';
 import { Op } from 'sequelize';

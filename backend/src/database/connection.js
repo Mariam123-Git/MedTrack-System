@@ -1,14 +1,15 @@
 import { Sequelize } from 'sequelize';
 import { logger } from '../utils/logger.js';
+var NODE_ENV='development';
 
 const sequelize = new Sequelize({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  database: process.env.DB_NAME,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
+  host: 'localhost',
+  port: 5432,
+  database: 'project_bolt_db',
+  username: 'admin',
+  password: 'admin123',
   dialect: 'postgres',
-  logging: process.env.NODE_ENV === 'development' ? 
+  logging: NODE_ENV === 'development' ? 
     (msg) => logger.debug(msg) : false,
   pool: {
     max: 10,
@@ -28,7 +29,7 @@ export async function connectDatabase() {
     await sequelize.authenticate();
     logger.info('Connexion à PostgreSQL établie avec succès');
     
-    if (process.env.NODE_ENV === 'development') {
+    if (NODE_ENV === 'development') {
       await sequelize.sync({ alter: true });
       logger.info('Modèles synchronisés avec la base de données');
     }
