@@ -2,6 +2,7 @@ import {
   Client,
   PrivateKey,
   AccountId,
+  AccountBalanceQuery, // <-- ici
   TokenCreateTransaction,
   TokenType,
   TokenSupplyType,
@@ -24,20 +25,20 @@ let operatorKey;
 console.log('Hedera account Id:', process.env.HEDERA_ACCOUNT_ID);
 export async function initializeHedera() {
   try {
-    // Configuration du client Hedera
     operatorId = AccountId.fromString(process.env.HEDERA_ACCOUNT_ID);
     operatorKey = PrivateKey.fromString(process.env.HEDERA_PRIVATE_KEY);
 
-    if (process.env.HEDERA_NETWORK === 'mainnet') {
-      client = Client.forMainnet();
-    } else {
-      client = Client.forTestnet();
-    }
+    client = process.env.HEDERA_NETWORK === 'mainnet'
+      ? Client.forMainnet()
+      : Client.forTestnet();
 
     client.setOperator(operatorId, operatorKey);
-    
-    // Test de connexion
-    const balance = await client.getAccountBalance(operatorId);
+
+    //  Correct balance query
+    const balance = await new AccountBalanceQuery()
+      .setAccountId(operatorId)
+      .execute(client);
+
     logger.info(`Hedera initialisé - Balance: ${balance.hbars.toString()}`);
     
     return client;

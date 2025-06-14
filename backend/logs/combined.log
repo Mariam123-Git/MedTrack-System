@@ -80,3 +80,15 @@
 {"level":"info","message":"Modèles synchronisés avec la base de données","service":"medtrack-africa","timestamp":"2025-06-14T09:30:51.062Z"}
 {"level":"info","message":"✅ Base de données connectée","service":"medtrack-africa","timestamp":"2025-06-14T09:30:51.063Z"}
 {"level":"info","message":"🎉 Tous les services sont opérationnels","service":"medtrack-africa","timestamp":"2025-06-14T09:30:51.064Z"}
+{"level":"info","message":"🚀 Serveur MedTrack Africa démarré sur le port 5000","service":"medtrack-africa","timestamp":"2025-06-14T11:20:17.129Z"}
+{"level":"info","message":"🌍 Environnement: development","service":"medtrack-africa","timestamp":"2025-06-14T11:20:17.135Z"}
+{"level":"info","message":"Connexion à PostgreSQL établie avec succès","service":"medtrack-africa","timestamp":"2025-06-14T11:20:17.566Z"}
+{"level":"info","message":"Modèles synchronisés avec la base de données","service":"medtrack-africa","timestamp":"2025-06-14T11:20:19.483Z"}
+{"level":"info","message":"🚀 Serveur MedTrack Africa démarré sur le port 5000","service":"medtrack-africa","timestamp":"2025-06-14T11:25:08.177Z"}
+{"level":"info","message":"🌍 Environnement: development","service":"medtrack-africa","timestamp":"2025-06-14T11:25:08.185Z"}
+{"level":"info","message":"Connexion à PostgreSQL établie avec succès","service":"medtrack-africa","timestamp":"2025-06-14T11:25:08.420Z"}
+{"level":"info","message":"Modèles synchronisés avec la base de données","service":"medtrack-africa","timestamp":"2025-06-14T11:25:10.041Z"}
+{"level":"info","message":"✅ Base de données connectée","service":"medtrack-africa","timestamp":"2025-06-14T11:25:10.042Z"}
+{"level":"info","message":"Hedera initialisé - Balance: 1000 ℏ","service":"medtrack-africa","timestamp":"2025-06-14T11:25:10.691Z"}
+{"level":"info","message":"✅ Hedera Hashgraph initialisé","service":"medtrack-africa","timestamp":"2025-06-14T11:25:10.692Z"}
+{"level":"info","message":"🎉 Tous les services sont opérationnels","service":"medtrack-africa","timestamp":"2025-06-14T11:25:10.692Z"}

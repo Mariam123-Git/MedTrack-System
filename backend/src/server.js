@@ -124,16 +124,7 @@ server.listen(PORT, async () => {
   logger.info('🎉 Tous les services sont opérationnels');
 });
 
-app.listen(PORT, () => {
-  logger.info(`🚀 Serveur MedTrack Africa démarré sur le port ${PORT}`);
-}).on('error', (err) => {
-  if (err.code === 'EADDRINUSE') {
-    logger.error(`Le port ${PORT} est déjà utilisé. Choisissez un autre port.`);
-    process.exit(1);
-  } else {
-    throw err;
-  }
-});
+
 
 // Gestion des erreurs non capturées
 process.on('uncaughtException', (error) => {
