@@ -46,6 +46,9 @@ app.use(cors({
   credentials: true
 }));
 
+
+
+
 // Middlewares de parsing
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -86,12 +89,12 @@ async function initializeServices() {
     // Connexion à la base de données
     await connectDatabase();
     logger.info('✅ Base de données connectée');
-/*
+
     // Initialisation Hedera
     await initializeHedera();
     logger.info('✅ Hedera Hashgraph initialisé');
 
-    // Initialisation MQTT pour IoT
+/*    // Initialisation MQTT pour IoT
     await initializeMQTT();
     logger.info('✅ MQTT initialisé');
 
@@ -119,6 +122,17 @@ server.listen(PORT, async () => {
   await initializeServices();
   
   logger.info('🎉 Tous les services sont opérationnels');
+});
+
+app.listen(PORT, () => {
+  logger.info(`🚀 Serveur MedTrack Africa démarré sur le port ${PORT}`);
+}).on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    logger.error(`Le port ${PORT} est déjà utilisé. Choisissez un autre port.`);
+    process.exit(1);
+  } else {
+    throw err;
+  }
 });
 
 // Gestion des erreurs non capturées

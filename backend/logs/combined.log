@@ -74,3 +74,9 @@
 {"level":"info","message":"Modèles synchronisés avec la base de données","service":"medtrack-africa","timestamp":"2025-06-13T19:51:49.765Z"}
 {"level":"info","message":"✅ Base de données connectée","service":"medtrack-africa","timestamp":"2025-06-13T19:51:49.765Z"}
 {"level":"info","message":"🎉 Tous les services sont opérationnels","service":"medtrack-africa","timestamp":"2025-06-13T19:51:49.766Z"}
+{"level":"info","message":"🚀 Serveur MedTrack Africa démarré sur le port 5000","service":"medtrack-africa","timestamp":"2025-06-14T09:30:48.882Z"}
+{"level":"info","message":"🌍 Environnement: development","service":"medtrack-africa","timestamp":"2025-06-14T09:30:48.893Z"}
+{"level":"info","message":"Connexion à PostgreSQL établie avec succès","service":"medtrack-africa","timestamp":"2025-06-14T09:30:49.139Z"}
+{"level":"info","message":"Modèles synchronisés avec la base de données","service":"medtrack-africa","timestamp":"2025-06-14T09:30:51.062Z"}
+{"level":"info","message":"✅ Base de données connectée","service":"medtrack-africa","timestamp":"2025-06-14T09:30:51.063Z"}
+{"level":"info","message":"🎉 Tous les services sont opérationnels","service":"medtrack-africa","timestamp":"2025-06-14T09:30:51.064Z"}

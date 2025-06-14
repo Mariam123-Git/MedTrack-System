@@ -13,11 +13,15 @@ import {
   Hbar
 } from '@hashgraph/sdk';
 import { logger } from '../utils/logger.js';
+import dotenv from 'dotenv';
+dotenv.config();
 
 let client;
 let operatorId;
 let operatorKey;
 
+
+console.log('Hedera account Id:', process.env.HEDERA_ACCOUNT_ID);
 export async function initializeHedera() {
   try {
     // Configuration du client Hedera
